@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  height: 68px;
+  margin-left: 100px;
+}
+
+.header img {
+  width: 160px;
+}
+
+.header nav {
+  display: flex;
+}
+
+.header ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.header ul li a {
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  color: black;
+}
+
+.header ul li a:hover {
+  text-decoration: underline; /* Ajoute le soulignement au survol */
+  color: black;
+}

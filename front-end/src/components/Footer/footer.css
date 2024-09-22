@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 1440px;
+    height: 209px;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+  color: white;
+}
+
+.LogoFooter {
+    width: 122px;
+    height: 39.44px;
+    filter: invert(100%) sepia(100%) saturate(0%) brightness(1000%);
+}

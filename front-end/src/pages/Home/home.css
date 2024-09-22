@@ -1,0 +1,30 @@
+.banner {
+  width: calc(100% - 200px);
+  max-width: 1240px; /* La largeur maximale de la bannière */
+  min-width: 335px; /* La largeur minimale de la bannière */
+  height: 223px;
+  min-height: 111px; /* Hauteur minimale de la bannière */
+  position: relative; /* Pour ajuster la position top/left */
+  left: 100px;
+  border: 1px solid transparent; /* Bordure transparente */
+  opacity: 1; /* La valeur 0 rendrait l'élément invisible, donc 1 pour le rendre visible */
+  border-radius: 15px; /* Ajout des angles arrondis */
+}
+
+.banner-image {
+  width: 100%; /* Assurez-vous que l'image occupe tout l'espace de la bannière */
+  height: 100%;
+  object-fit: cover; /* Assure que l'image est bien ajustée dans la bannière */
+  border-radius: 25px;
+  opacity: 60%;
+  filter: brightness(0.6); /* Fonce l'image (0.6 = 60% de luminosité) */
+}
+
+.banner-text {
+  position: absolute; /* Pour positionner le texte au-dessus de l'image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centre le texte dans la bannière */
+  color: white; /* Couleur du texte */
+  text-align: center;
+}
