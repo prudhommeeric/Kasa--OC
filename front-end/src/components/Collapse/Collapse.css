@@ -1,0 +1,39 @@
+.collapse {
+    width: 956px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 28px;
+}
+
+.collapse-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 54px;
+    font-weight: 700;
+    color: white;
+    background-color:#FF6060;
+    padding: 0 15px;
+    height: 54px;
+}
+
+.chevron {
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.rotate-up {
+    transform: rotate(180deg);
+}
+
+.rotate-down {
+    transform: rotate(0deg);
+}
+
+.collapse-content {
+    padding: 10px;
+    background: #F6F6F6;
+
+}

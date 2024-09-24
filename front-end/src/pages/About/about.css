@@ -1,0 +1,6 @@
+.block-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 38px 0px;
+}
