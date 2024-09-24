@@ -1,9 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  width: 1240px;
-  height: 68px;
-  margin-left: 100px;
+  margin-bottom: 50px;
 }
 
 .header img {
@@ -20,12 +18,11 @@
   list-style-type: none;
 }
 
-.header ul li a {
-  text-decoration: none; /* Supprime le soulignement par défaut */
-  color: black;
+.nav-links li a {
+  color: black; /* Couleur par défaut des liens */
+  text-decoration: none; /* Pas de soulignement par défaut */
 }
 
-.header ul li a:hover {
-  text-decoration: underline; /* Ajoute le soulignement au survol */
-  color: black;
+.nav-links li a.active {
+  text-decoration: underline; /* Soulignement pour le lien actif */
 }

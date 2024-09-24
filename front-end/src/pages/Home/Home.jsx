@@ -1,23 +1,18 @@
 import React from 'react';
-import './home.css'; 
-import BannerImage from '../../assets/image/Banner/Banner.png';
-import CardsContainer from './CardsContainer.jsx';
-
-
+import './home.css';
+import CardsContainer from '../../components/CardsContainer/CardsContainer';
+import Banner from '../../components/Banner/Banner';
 
 function Home() {
   return (
-    <div className="home">
-      <div className="banner">
-        <img src={BannerImage} alt="Bannière d'accueil" className="banner-image" />
-        <div className="banner-text">
-          <h1>Chez vous, partout et d'ailleurs</h1>
-        </div>
+    <main>
+      <div className="home">
+        <Banner text="Chez vous, partout et d'ailleurs" />
+        
+        {/* Encart des cartes */}
+        <CardsContainer />
       </div>
-      
-      {/* Encart des cartes */}
-      <CardsContainer />
-    </div>
+    </main>
   );
 }
 

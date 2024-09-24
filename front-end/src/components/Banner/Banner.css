@@ -1,0 +1,31 @@
+.banner {
+  width: 100%;
+  height: 223px;
+  position: relative;
+  border: 1px solid transparent;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  filter: brightness(0.75); /* Assombrit l'image de 25% */
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 413px) {
+  .banner {
+    height: 111px;
+  }
+}
