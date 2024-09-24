@@ -25,7 +25,7 @@
 }
 
 @media (max-width: 413px) {
-  .banner {
-    height: 111px;
-  }
+    li {
+        font-size: 12px;
+    }
 }

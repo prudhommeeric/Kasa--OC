@@ -26,3 +26,9 @@
 .nav-links li a.active {
   text-decoration: underline; /* Soulignement pour le lien actif */
 }
+
+@media (max-width: 413px) {
+  .banner {
+    height: 111px;
+  }
+}
