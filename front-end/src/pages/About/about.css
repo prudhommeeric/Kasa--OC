@@ -1,6 +1,12 @@
 .block-collapse {
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    margin: 38px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 38px 0px;
+}
+
+@media (max-width: 1413px) {
+  .block-collapse {
+    margin: 19px 0px;
+  }
 }

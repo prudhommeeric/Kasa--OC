@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './Collapse.css'; // Assurez-vous d'avoir un fichier CSS pour le style
-import ChevronImage from '../../assets/image/Chevron/chevron.png'; // Importer l'image du chevron
+import './Collapse.css';
+import ChevronImage from '../../assets/image/Chevron/chevron.png';
 
 function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false); // État pour gérer l'ouverture/fermeture

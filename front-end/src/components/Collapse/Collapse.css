@@ -1,39 +1,55 @@
 .collapse {
-    width: 956px;
-    height: auto;
-    margin: 10px 0;
-    border-radius: 5px;
-    margin-bottom: 28px;
+  width: 956px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 5px;
+  margin-bottom: 28px;
 }
 
 .collapse-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    height: 54px;
-    font-weight: 700;
-    color: white;
-    background-color:#FF6060;
-    padding: 0 15px;
-    height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  background-color: #ff6060;
+  padding: 0 15px;
+  height: 54px;
 }
 
 .chevron {
-    width: 20px;
-    transition: transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
 }
 
 .rotate-up {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .rotate-down {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .collapse-content {
-    padding: 10px;
-    background: #F6F6F6;
+  padding: 10px;
+  background: #f6f6f6;
+}
 
+@media (max-width: 948px) {
+  .collapse {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .collapse-title {
+    height: 30px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .collapse-content {
+    padding: 5px;
+  }
 }

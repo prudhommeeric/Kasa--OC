@@ -19,8 +19,8 @@
 }
 
 .nav-links li a {
-  color: black; /* Couleur par défaut des liens */
-  text-decoration: none; /* Pas de soulignement par défaut */
+  color: black;
+  text-decoration: none;
 }
 
 .nav-links li a.active {

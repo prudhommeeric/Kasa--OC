@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
-import Banner from '../../components/Banner/Banner'; // Import du composant Banner
-import AboutBannerImage from '../../assets/image/Banner/AboutBanner.png'; // Import de l'image de la bannière
+import Banner from '../../components/Banner/Banner'; 
+import AboutBannerImage from '../../assets/image/Banner/AboutBanner.png'; 
 import Collapse from '../../components/Collapse/Collapse'; // Import du composant Collapse
 
 function About() {

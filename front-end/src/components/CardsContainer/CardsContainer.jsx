@@ -22,7 +22,7 @@ const CardsContainer = () => {
                         <img
                             src={property.cover}
                             alt={property.title}
-                            className="card-image" // Ajout de la classe ici
+                            className="card-image"
                         />
                         <h3 className="card-title">{property.title}</h3>
                     </div>

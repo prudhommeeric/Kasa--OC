@@ -1,4 +1,3 @@
-// src/pages/Home/Home.jsx
 import React from 'react';
 import './home.css';
 import CardsContainer from '../../components/CardsContainer/CardsContainer';
