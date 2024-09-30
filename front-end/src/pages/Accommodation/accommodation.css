@@ -1,0 +1,150 @@
+/* Conteneur principal */
+.accommodation__content {
+  margin-top: 20px;
+}
+
+/* Conteneur pour le titre, la localisation et les informations de l'hôte */
+.accommodation__info {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Titre et localisation */
+.accommodation__title-location {
+  margin-bottom: 10px;
+}
+
+.accommodation__title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ff6060;
+  margin: 0;
+}
+
+.accommodation__location {
+  font-size: 18px;
+  color: gray;
+  margin: 0;
+}
+
+/* Informations de l'hôte */
+.accommodation__host-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accommodation__host-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.accommodation__host-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6060;
+}
+
+/* Tags et étoiles de notation */
+.accommodation__tags-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.accommodation__tags-list {
+  display: flex;
+  margin-right: 20px;
+}
+
+.accommodation__tag {
+  background-color: #ff6060;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+/* Étoiles de notation */
+.accommodation__rating-stars {
+  font-size: 18px;
+}
+
+/* Conteneur des Collapse */
+.accommodation .accommodation__collapses {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Collapse */
+.accommodation .accommodation__collapse {
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+.accommodation .accommodation__collapse-title {
+  height: 52px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+li {
+  font-size: 18px;
+  font-weight: 400;
+  list-style: none;
+}
+
+ul {
+  padding: 0px;
+}
+
+.accommodation__collapse-content {
+  font-size: 18px;
+  width: 98%;
+}
+
+.accommodation__chevron {
+  margin-right: 5px;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accommodation .accommodation__content {
+    flex-direction: column;
+  }
+
+  .accommodation .accommodation__info {
+    width: 100%;
+  }
+
+  .accommodation .accommodation__rating-stars {
+    font-size: 18px;
+  }
+
+  .accommodation .accommodation__collapses {
+    flex-direction: column;
+  }
+
+  .accommodation .accommodation__collapse {
+    width: 100%;
+  }
+
+  .accommodation li {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}

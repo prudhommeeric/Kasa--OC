@@ -1,13 +1,10 @@
 .layout-wrapper {
-    max-width: 1440px;
-    margin: 45px 100px 0;
+  max-width: 1440px;
+  margin: 45px auto;
 }
 
 @media (max-width: 1413px) {
-    .layout-wrapper  {
-        margin: 10px 10px 0;
-    }
+  .layout-wrapper {
+    margin: 20px 10px;
   }
-  
-
-
+}

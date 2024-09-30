@@ -10,16 +10,16 @@ function Collapse({ title, content }) {
     };
 
     return (
-        <div className="collapse">
-            <div className="collapse-title" onClick={toggleCollapse}>
+        <div className="accommodation__collapse">
+            <div className="accommodation__collapse-title" onClick={toggleCollapse}>
                 <span>{title}</span>
                 <img
                     src={ChevronImage}
                     alt="Chevron"
-                    className={`chevron ${isOpen ? 'rotate-up' : 'rotate-down'}`} // Rotation selon l'état
+                    className={`accommodation__chevron ${isOpen ? 'accommodation__rotate-up' : 'accommodation__rotate-down'}`} // Rotation selon l'état
                 />
             </div>
-            {isOpen && <div className="collapse-content">{content}</div>} {/* Affiche le contenu si ouvert */}
+            {isOpen && <div className="accommodation__collapse-content">{content}</div>} {/* Affiche le contenu si ouvert */}
         </div>
     );
 }

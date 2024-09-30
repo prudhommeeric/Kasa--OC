@@ -1,12 +1,27 @@
-.block-collapse {
+.about-page .about-page__collapse-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 38px 0px;
 }
 
+.about-page .about-page__collapse-content {
+  font-size: 18px;
+  width: 98%;
+}
+
+.about-page .about-page__collapse {
+  width: 86%;
+  margin-bottom: 15px;
+}
+
+.about-page .about-page__collapse-title {
+  font-size: 24px;
+}
+
+/* Media queries pour les résolutions plus petites */
 @media (max-width: 1413px) {
-  .block-collapse {
+  .about-page .about-page__collapse-container {
     margin: 19px 0px;
   }
 }
