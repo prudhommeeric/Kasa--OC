@@ -4,10 +4,9 @@ import './Banner.css';
 function Banner({ text, image }) {
     return (
         <div className="banner">
-            <img src={image} alt="Bannière" className="banner-image" />
-            <div className="banner-text">
-                <h1>{text}</h1>
-            </div>
+            <img src={image} alt="Bannière" className="banner-image" />          
+                <span className="banner-text">{text}</span>
+            
         </div>
     );
 }

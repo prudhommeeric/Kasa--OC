@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 38px 0px;
+  gap: 15px;
 }
 
 .about-page .about-page__collapse-content {
@@ -20,8 +21,7 @@
 }
 
 /* Media queries pour les résolutions plus petites */
-@media (max-width: 1413px) {
-  .about-page .about-page__collapse-container {
-    margin: 19px 0px;
-  }
+@media (max-width: 800px) {
+
+  
 }

@@ -1,37 +1,28 @@
-
-
 .error-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin-bottom: 139px;
+  gap: 139px;
 }
 
 .error-code {
-    width: 597px;
-    height: 263px;
-    font-size: 288px;
-    font-weight: 700;
-    text-align: center;
-    color: #FF6060;
+  font-size: 15rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ff6060;
+  margin: 0;
 }
 
 .error-message {
-  margin-top: 139px;
-  width: 872px;
-  height: 51px;
-  font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 500;
-  line-height: 51.34px;
-  color: #FF6060;
+  margin: 0;
+  color: #ff6060;
+  text-align: center;
 }
 
 .home-link {
-  margin-top: 139px;
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -48,29 +39,24 @@
 }
 
 /* Media queries pour les résolutions plus petites */
-@media (max-width: 1413px) {
+@media (max-width: 800px) {
+  .error-container{
+    gap: 113px;
+  }
   .error-code {
-    width: 198px;
-    height: 99px;
     font-size: 96px;
   }
 
-      .error-message {
-        width: 260px;
-        height: 52px;
-        font-size: 18px;
-        text-align: center;
-    }
+  .error-message {
+    font-size: 18px;
+    text-align: center;
+  }
 
-    .home-link {
-      font-size: 14px;
-}
-.error-container{
-  margin-bottom: 0px;
-}
+  .home-link {
+    font-size: 14px;
+  }
 
-.home-link {
-  font-size: 14px;
-  margin: auto 113px;
-}
+  .home-link {
+    font-size: 14px;
+  }
 }
