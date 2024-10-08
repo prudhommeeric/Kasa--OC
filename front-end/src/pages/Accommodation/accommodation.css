@@ -1,18 +1,18 @@
-/* Conteneur principal */
 .accommodation__content {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* Conteneur pour le titre, la localisation et les informations de l'hôte */
 .accommodation__info {
-  margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Séparer le titre et l'info hôte */
+  align-items: center; /* Aligner les éléments verticalement sur une ligne */
+  margin-bottom: 20px;
+  gap: 20px; /* Espace entre les éléments */
 }
 
-/* Titre et localisation */
 .accommodation__title-location {
-  margin-bottom: 10px;
+  flex: 1; /* Le titre occupe toute la largeur disponible */
 }
 
 .accommodation__title {
@@ -24,7 +24,7 @@
 
 .accommodation__location {
   font-size: 18px;
-  color: gray;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -40,10 +40,10 @@
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 15px;
 }
 
 .accommodation__host-name {
+  width: 93px;
   font-size: 20px;
   font-weight: bold;
   color: #ff6060;
@@ -55,6 +55,14 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
+}
+
+/* Parent pour les étoiles et les infos de l'hôte, affichage au-dessus de 800px inchangé */
+.accommodation__tags-host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
 }
 
 .accommodation__tags-list {
@@ -83,19 +91,9 @@
   margin-top: 20px;
 }
 
-/* Collapse */
 .accommodation .accommodation__collapse {
-  width: 48%;
-  margin-bottom: 15px;
-}
-
-.accommodation .accommodation__collapse-title {
-  height: 52px;
   width: 100%;
-  border-radius: 5px;
-  padding: 0px;
-  font-size: 18px;
-  padding-left: 10px;
+  margin-bottom: 15px;
 }
 
 li {
@@ -106,50 +104,73 @@ li {
 
 ul {
   padding: 0px;
-}
-
-.accommodation__collapse-content {
-  font-size: 18px;
-  width: 98%;
-}
-
-.accommodation__chevron {
-  margin-right: 5px;
-}
-
-footer {
-  margin-top: 50px;
+  margin: 0px;
 }
 
 /* Responsive */
 @media (max-width: 800px) {
-  .accommodation .accommodation__content {
-    flex-direction: column;
+  li {
+    font-size: 12px;
   }
 
-  .accommodation .accommodation__info {
-    width: 100%;
-  }
-
-  .accommodation .accommodation__rating-stars {
-    font-size: 18px;
-  }
-
+  /* Conteneur des Collapse */
   .accommodation .accommodation__collapses {
+    margin-top: 0;
+    gap: 5px;
+  }
+
+  /* La grille devient une seule colonne */
+  .accommodation__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Espace entre les éléments */
+  }
+
+  /* Les informations sur le titre, la localisation et l'hôte */
+  .accommodation__info {
+    flex-direction: column; /* Empiler les éléments pour les petits écrans */
+    align-items: unset;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .accommodation__title-location {
+    margin-bottom: 10px; /* Espace en dessous du titre */
+  }
+
+  /* Div parent pour gérer l'affichage de rating-stars et host-info */
+  .accommodation__tags-host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 29px;
+  }
+
+  /* Pour que .accommodation__rating-stars soit au même niveau que .accommodation__host-info */
+  .accommodation__rating-stars {
+    align-self: center;
+    margin-right: auto;
+  }
+
+  /* Les tags passent en dessous */
+  .accommodation__tags-list {
+    margin-top: -125px;
+    display: block;
+  }
+
+  .accommodation__host-info {
+    align-self: flex-end; /* Aligner les informations de l'hôte à droite */
+  }
+
+  /* Les collapses s'empilent */
+  .accommodation__collapses {
     flex-direction: column;
+    gap: 15px; /* Espace entre les collapses */
   }
 
-  .accommodation .accommodation__collapse {
-    width: 100%;
-  }
-
-  .accommodation li {
-    font-size: 24px;
-    font-weight: 500;
-  }
-
-  .accommodation__host-picture {
-    width: 32px;
-    
+  .accommodation__collapse {
+    width: 100%; /* S'assurer que chaque collapse occupe 100% de la largeur */
   }
 }

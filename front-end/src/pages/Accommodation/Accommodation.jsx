@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Importation de useNavigate pour gérer les erreurs
+import { useParams, useNavigate } from 'react-router-dom';
 import Slideshow from '../../components/Carousel/Carousel';
 import RatingStars from '../../components/CardsContainer/RatingStars/RatingStars';
 import Collapse from '../../components/Collapse/Collapse';
 import './Accommodation.css';
 
 const Accommodation = () => {
-  const { id } = useParams(); // Récupère l'id de l'URL
-  const navigate = useNavigate(); // Hook pour rediriger vers la page d'erreur
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [property, setProperty] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -15,7 +15,7 @@ const Accommodation = () => {
     fetch(`http://localhost:8080/api/properties/${id}`)
       .then((response) => {
         if (response.status === 404) {
-          navigate('/error'); // Redirection si l'ID est incorrect
+          navigate('/error');
           return null;
         }
         return response.json();
@@ -28,51 +28,54 @@ const Accommodation = () => {
       })
       .catch((error) => {
         console.error('Erreur lors de la récupération des données:', error);
-        navigate('/error'); // Redirection en cas d'erreur
+        navigate('/error');
       });
   }, [id, navigate]);
 
   if (isLoading) {
-    return <div>Chargement...</div>; // Affiche un message de chargement
+    return <div>Chargement...</div>;
   }
 
   return (
     <div className="accommodation">
-      {/* Carrousel */}
-      <Slideshow pictures={property.pictures} /> {/* Affichage du carrousel avec les images */}
+      {/* Carrousel avec les images de la propriété */}
+      <Slideshow pictures={property.pictures} />
 
-      {/* Conteneur principal */}
       <div className="accommodation__content">
-
-        {/* Conteneur pour le titre, la localisation et les informations de l'hôte */}
+        {/* Informations principales */}
         <div className="accommodation__info">
           <div className="accommodation__title-location">
             <h1 className="accommodation__title">{property.title}</h1>
             <p className="accommodation__location">{property.location}</p>
           </div>
 
-          <div className="accommodation__host-info">
-            <h2 className="accommodation__host-name">{property.host.name}</h2>
-            <img src={property.host.picture} alt={property.host.name} className="accommodation__host-picture" />
+          {/* Div parent pour les étoiles et l'information de l'hôte */}
+          <div className="accommodation__tags-host">
+            <div className="accommodation__rating-stars">
+              <RatingStars rating={parseInt(property.rating)} />
+            </div>
+            <div className="accommodation__host-info">
+              <h2 className="accommodation__host-name">{property.host.name}</h2>
+              <img
+                src={property.host.picture}
+                alt={property.host.name}
+                className="accommodation__host-picture"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Section des tags et étoiles de notation */}
-        <div className="accommodation__tags-rating">
-          <div className="accommodation__tags-list">
-            {property.tags.map((tag, index) => (
-              <span key={index} className="accommodation__tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-          <div className="accommodation__rating-stars">
-            <RatingStars rating={parseInt(property.rating)} />
-          </div>
+        {/* Tags */}
+        <div className="accommodation__tags-list">
+          {property.tags.map((tag, index) => (
+            <span key={index} className="accommodation__tag">
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
 
-      {/* Conteneur des collapses */}
+      {/* Collapses pour la description et les équipements */}
       <div className="accommodation__collapses">
         <Collapse title="Description" content={property.description} />
         <Collapse

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // Import de useParams
-import './Carousel.css'; // Import des styles du carrousel
-import Chevron from '../../assets/image/Chevron/chevron.png'; // Import de l'image du chevron
+import { useParams } from 'react-router-dom';
+import './Carousel.css';
+import Chevron from '../../assets/image/Chevron/chevron.png';
 
 const Slideshow = () => {
-  const { id } = useParams(); // Récupération de l'ID depuis l'URL
-  const [properties, setProperties] = useState([]);
+  const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentProperty, setCurrentProperty] = useState(null);
 
@@ -13,13 +12,11 @@ const Slideshow = () => {
     fetch('http://localhost:8080/api/properties')
       .then((response) => response.json())
       .then((data) => {
-        setProperties(data);
-        // Trouver la propriété en fonction de l'ID
         const selectedProperty = data.find((property) => property.id === id);
         setCurrentProperty(selectedProperty);
       })
       .catch((error) => console.error('Erreur lors de la récupération des données:', error));
-  }, [id]); // Dépendance sur l'ID, pour refetch les données si l'ID change
+  }, [id]);
 
   const handleNext = () => {
     if (currentProperty) {
@@ -33,7 +30,6 @@ const Slideshow = () => {
     }
   };
 
-  // Si les données ne sont pas encore chargées ou si la propriété n'existe pas
   if (!currentProperty) {
     return <div>Chargement...</div>;
   }
@@ -47,11 +43,10 @@ const Slideshow = () => {
       </button>
       <div className="slideshow__content">
         <img
-          src={currentProperty.pictures[currentIndex]} /* Gère les images dans la liste */
+          src={currentProperty.pictures[currentIndex]}
           alt={currentProperty.title}
           className="slideshow__image"
         />
-        
         <div className="slideshow__indicator">
           {currentIndex + 1} / {totalImages}
         </div>
