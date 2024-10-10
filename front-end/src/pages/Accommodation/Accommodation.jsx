@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Slideshow from '../../components/Carousel/Carousel';
-import RatingStars from '../../components/CardsContainer/RatingStars/RatingStars';
+import RatingStars from '../../components/RatingStars/RatingStars';
 import Collapse from '../../components/Collapse/Collapse';
 import './Accommodation.css';
 
