@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css';
+import './about.css';
 import Banner from '../../components/Banner/Banner'; 
 import AboutBannerImage from '../../assets/image/Banner/AboutBanner.png'; 
 import Collapse from '../../components/Collapse/Collapse';

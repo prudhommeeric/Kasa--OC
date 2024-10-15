@@ -1,27 +1,21 @@
 footer {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  height: 209px;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 209px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 footer p {
-  color: white;
-  margin-top: 28px;
+    color: white;
+    margin-top: 28px;
 }
 
 .LogoFooter {
-  width: 122px;
-  height: 39.44px;
-  filter: invert(100%) sepia(100%) saturate(0%) brightness(1000%);
-}
-
-@media (max-width: 1413px) {
-  footer {
-    margin: 10px 10px 0;
-  }
+    width: 122px;
+    height: 39.44px;
+    filter: invert(100%) sepia(100%) saturate(0%) brightness(1000%);
 }
