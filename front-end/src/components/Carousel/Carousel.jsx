@@ -3,38 +3,28 @@ import { useParams } from 'react-router-dom';
 import './Carousel.css';
 import Chevron from '../../assets/image/Chevron/chevron.png';
 
-const Slideshow = () => {
-  const { id } = useParams();
+const Slideshow = ({images}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentProperty, setCurrentProperty] = useState(null);
+  
 
-  useEffect(() => {
-    fetch('http://localhost:8080/api/properties')
-      .then((response) => response.json())
-      .then((data) => {
-        const selectedProperty = data.find((property) => property.id === id);
-        setCurrentProperty(selectedProperty);
-      })
-      .catch((error) => console.error('Erreur lors de la récupération des données:', error));
-  }, [id]);
+  
 
   const handleNext = () => {
-    if (currentProperty) {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % currentProperty.pictures.length);
-    }
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    
   };
 
   const handlePrev = () => {
-    if (currentProperty) {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + currentProperty.pictures.length) % currentProperty.pictures.length);
-    }
+    
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    
   };
 
-  if (!currentProperty) {
+  if (!images) {
     return <div>Chargement...</div>;
   }
 
-  const totalImages = currentProperty.pictures.length;
+  const totalImages = images.length;
 
   return (
     <div className="slideshow">
@@ -43,8 +33,8 @@ const Slideshow = () => {
       </button>
       <div className="slideshow__content">
         <img
-          src={currentProperty.pictures[currentIndex]}
-          alt={currentProperty.title}
+          src={images[currentIndex]}
+          alt={images.title}
           className="slideshow__image"
         />
         <div className="slideshow__indicator">

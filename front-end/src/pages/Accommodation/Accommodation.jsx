@@ -38,7 +38,7 @@ const Accommodation = () => {
 	return (
 	  <div className="accommodation">
 		  {/* Carrousel avec les images de la propriété */}
-		  <Slideshow pictures={property.pictures}/>
+		  <Slideshow images={property.pictures}/>
 
 		  <div className="accommodation__content">
 			  {/* Informations principales */}

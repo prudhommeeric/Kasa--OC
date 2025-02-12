@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importation du hook useNavigate
+import { Link, useNavigate } from 'react-router-dom'; // Importation du hook useNavigate
 import './CardsContainer.css'; 
 
 const CardsContainer = () => {
@@ -31,14 +31,14 @@ const CardsContainer = () => {
         <div className="cards-container">
             {properties.length > 0 ? (
                 properties.map((property) => (
-                    <div key={property.id} className="card" onClick={() => window.location.href = `/accommodation/${property.id}`}>
+                    <Link key={property.id} className="card" to={`/accommodation/${property.id}`}>
                         <img
                             src={property.cover}
                             alt={property.title}
                             className="card-image"
                         />
                         <h3 className="card-title">{property.title}</h3>
-                    </div>
+                    </Link>
                 ))
             ) : (
                 <p>Chargement des propriétés...</p>
