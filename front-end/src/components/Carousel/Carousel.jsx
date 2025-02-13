@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import './Carousel.css';
 import Chevron from '../../assets/image/Chevron/chevron.png';
 
-const Slideshow = ({images}) => {
+const Carousel = ({images}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
 
@@ -27,25 +27,25 @@ const Slideshow = ({images}) => {
   const totalImages = images.length;
 
   return (
-    <div className="slideshow">
-      <button onClick={handlePrev} className="slideshow__btn slideshow__btn--left">
-        <img src={Chevron} alt="Chevron gauche" className="slideshow__chevron slideshow__chevron--left" />
+    <div className="carousel">
+      <button onClick={handlePrev} className="carousel__btn carousel__btn--left">
+        <img src={Chevron} alt="Chevron gauche" className="carousel__chevron carousel__chevron--left" />
       </button>
-      <div className="slideshow__content">
+      <div className="carousel__content">
         <img
           src={images[currentIndex]}
           alt={images.title}
-          className="slideshow__image"
+          className="carousel__image"
         />
-        <div className="slideshow__indicator">
+        <div className="carousel__indicator">
           {currentIndex + 1} / {totalImages}
         </div>
       </div>
-      <button onClick={handleNext} className="slideshow__btn slideshow__btn--right">
-        <img src={Chevron} alt="Chevron droite" className="slideshow__chevron slideshow__chevron--right" />
+      <button onClick={handleNext} className="carousel__btn carousel__btn--right">
+        <img src={Chevron} alt="Chevron droite" className="carousel__chevron carousel__chevron--right" />
       </button>
     </div>
   );
 };
 
-export default Slideshow;
+export default Carousel;

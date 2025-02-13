@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import Slideshow from '../../components/Carousel/Carousel'
+import Carousel from '../../components/Carousel/Carousel'
 import Collapse from '../../components/Collapse/Collapse'
 import RatingStars from '../../components/RatingStars/RatingStars'
 import './accommodation.css'
@@ -38,7 +38,7 @@ const Accommodation = () => {
 	return (
 	  <div className="accommodation">
 		  {/* Carrousel avec les images de la propriété */}
-		  <Slideshow images={property.pictures}/>
+		  <Carousel images={property.pictures}/>
 
 		  <div className="accommodation__content">
 			  {/* Informations principales */}
